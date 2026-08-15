@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#071715">
-<meta name="description" content="IHSAN Koi — Toko Koi & Ikan Hias. Pilih ikan, cek detail, masukkan keranjang, lalu konfirmasi pesanan melalui WhatsApp.">
+<meta name="description" content="IHSAN Koi — Koi & ikan hias pilihan dengan katalog, portofolio media, keranjang, dan konfirmasi WhatsApp.">
 <title>IHSAN Koi — Koi & Ornamental Fish</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,41 +23,41 @@ html{scroll-behavior:smooth}
 body{font-family:"DM Sans",sans-serif;background:radial-gradient(circle at 80% 10%,rgba(40,105,83,.16),transparent 30%),var(--bg);color:var(--text);overflow-x:hidden}
 body.lock{overflow:hidden}
 a{text-decoration:none;color:inherit}
-button,input,select{font:inherit}
+button,input,select,textarea{font:inherit}
 button{cursor:pointer;border:0}
 img{max-width:100%;display:block}
 .container{width:min(1180px,92%);margin:auto}
 .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:700}
-.section{padding:110px 0}
+.section{padding:clamp(72px,9vw,110px) 0}
 .section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:42px}
 .section-head h2{font:700 clamp(2rem,4vw,3.7rem)/1.05 "Playfair Display",serif;max-width:720px}
 .section-head p{color:var(--muted);max-width:480px;line-height:1.8}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 18px;border-radius:999px;transition:.25s ease;font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 18px;border-radius:999px;transition:.25s ease;font-weight:700;white-space:nowrap}
 .btn-primary{background:var(--gold);color:#10150f;box-shadow:0 12px 35px rgba(215,181,109,.18)}
 .btn-primary:hover{transform:translateY(-2px);background:var(--gold2)}
 .btn-ghost{border:1px solid var(--line);background:rgba(255,255,255,.035);color:var(--text)}
 .btn-ghost:hover{background:rgba(255,255,255,.08)}
 .navbar{position:fixed;z-index:50;top:0;left:0;width:100%;padding:18px 0;transition:.3s}
 .navbar.scrolled{background:rgba(5,18,15,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.08em}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.08em;flex:0 0 auto}
 .logo-mark{width:40px;height:40px;border:1px solid rgba(215,181,109,.5);border-radius:50%;display:grid;place-items:center;color:var(--gold);position:relative}
 .logo-mark:before{content:"";width:17px;height:9px;border:1px solid currentColor;border-radius:100% 0 100% 0;transform:rotate(-25deg)}
-.nav-links{display:flex;gap:28px;color:#c5d0cb;font-size:.92rem}
+.nav-links{display:flex;gap:26px;color:#c5d0cb;font-size:.92rem;margin-left:auto}
 .nav-links a{transition:.2s}.nav-links a:hover{color:var(--gold)}
-.nav-actions{display:flex;gap:9px;align-items:center}
+.nav-actions{display:flex;gap:9px;align-items:center;flex:0 0 auto}
 .cart-btn{position:relative}
 .badge{position:absolute;right:-2px;top:-4px;width:19px;height:19px;border-radius:50%;background:var(--danger);color:white;font-size:.65rem;display:grid;place-items:center;font-weight:800}
-.menu-btn{display:none;background:none;color:white;font-size:1.5rem}
-.hero{min-height:100svh;position:relative;display:flex;align-items:center;overflow:hidden;padding-top:90px}
-.hero-media{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(4,16,13,.97) 0%,rgba(4,16,13,.82) 40%,rgba(4,16,13,.28) 75%,rgba(4,16,13,.55)),url("https://images.unsplash.com/photo-1603273275096-43a3d8d54d1d?auto=format&fit=crop&w=2200&q=85");background-size:cover;background-position:center;transform:scale(1.08)}
+.menu-btn{display:none;background:none;color:white;font-size:1.5rem;padding:6px}
+.hero{min-height:100svh;position:relative;display:flex;align-items:center;overflow:hidden;padding:105px 0 80px}
+.hero-media{position:absolute;inset:0;background-image:linear-gradient(90deg,rgba(4,16,13,.97) 0%,rgba(4,16,13,.78) 43%,rgba(4,16,13,.28) 78%,rgba(4,16,13,.55)),url("https://images.unsplash.com/photo-1659850656904-ceb80a148545?auto=format&fit=crop&w=2200&q=85");background-size:cover;background-position:center;transform:scale(1.06)}
 .hero:after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,var(--bg));z-index:1}
-.hero-content{position:relative;z-index:2;max-width:780px}
+.hero-content{position:relative;z-index:2;max-width:800px}
 .hero h1{font:700 clamp(3.2rem,8vw,7.2rem)/.9 "Playfair Display",serif;margin:20px 0}
 .hero h1 span{color:var(--gold)}
-.hero p{font-size:1.06rem;color:#c6d1cc;line-height:1.8;max-width:620px}
+.hero p{font-size:1.06rem;color:#c6d1cc;line-height:1.8;max-width:650px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.hero-stats{display:flex;gap:34px;margin-top:55px}
+.hero-stats{display:flex;flex-wrap:wrap;gap:34px;margin-top:55px}
 .stat strong{display:block;font-size:1.35rem}.stat span{display:block;color:var(--muted);font-size:.78rem;margin-top:4px}
 .scroll-note{position:absolute;right:4%;bottom:45px;z-index:3;writing-mode:vertical-rl;color:#aabbb4;font-size:.7rem;letter-spacing:.18em}
 .feature-strip{position:relative;z-index:4;margin-top:-42px}
@@ -70,69 +70,32 @@ img{max-width:100%;display:block}
 .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .product-card{background:linear-gradient(145deg,var(--card),#0c1e1a);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.35s;position:relative}
 .product-card:hover{transform:translateY(-7px);border-color:rgba(215,181,109,.35);box-shadow:var(--shadow)}
-.product-img{height:270px;position:relative;overflow:hidden}
-.product-img img{width:100%;height:100%;object-fit:cover;transition:.7s}
-.product-card:hover .product-img img{transform:scale(1.06)}
+.product-img{height:270px;position:relative;overflow:hidden;background:#0b1d18}.product-img img{width:100%;height:100%;object-fit:cover;transition:.7s}.product-card:hover .product-img img{transform:scale(1.06)}
 .tag{position:absolute;top:14px;left:14px;background:rgba(4,17,14,.76);backdrop-filter:blur(8px);border:1px solid var(--line);padding:7px 10px;border-radius:999px;font-size:.68rem;color:var(--gold)}
-.product-info{padding:20px}
-.product-meta{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:.74rem;margin-bottom:8px}
-.product-info h3{font-size:1.15rem;margin-bottom:7px}.product-info p{color:var(--muted);font-size:.82rem;line-height:1.5;min-height:40px}
-.price{font-size:1.1rem;font-weight:800;color:var(--gold);margin:15px 0}
-.card-actions{display:grid;grid-template-columns:1fr 44px;gap:8px}
-.icon-btn{border:1px solid var(--line);background:rgba(255,255,255,.03);color:white;border-radius:13px;font-size:1.1rem}
-.icon-btn:hover{background:rgba(255,255,255,.08)}
-.story{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
-.story-img{height:650px;border-radius:30px;overflow:hidden;position:relative}
-.story-img img{width:100%;height:100%;object-fit:cover}
-.story-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,.65))}
-.story-copy h2{font:700 clamp(2.3rem,4vw,4.3rem)/1.03 "Playfair Display",serif;margin:16px 0 25px}
-.story-copy>p{color:var(--muted);line-height:1.85}
-.checks{display:grid;gap:13px;margin:28px 0}.check{display:flex;gap:12px;align-items:flex-start}.check i{color:var(--gold);font-style:normal}.check span{color:#c5d1cc;font-size:.9rem;line-height:1.55}
-.koi-process{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.process{padding:30px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#0d211b,#0a1916)}
-.process-num{font:700 2.5rem "Playfair Display";color:var(--gold);opacity:.7}.process h3{margin:15px 0 8px}.process p{color:var(--muted);font-size:.85rem;line-height:1.7}
-.testimonial{background:linear-gradient(135deg,#102a21,#0a1916);border:1px solid var(--line);border-radius:30px;padding:50px;text-align:center}
-.quote{font:700 clamp(1.5rem,3vw,2.7rem)/1.35 "Playfair Display",serif;max-width:800px;margin:auto}
-.quote-by{margin-top:22px;color:var(--gold);font-size:.8rem}
-.faq{max-width:860px;margin:auto}
-.faq-item{border-bottom:1px solid var(--line)}
-.faq-q{width:100%;background:none;color:white;text-align:left;padding:24px 0;display:flex;justify-content:space-between;gap:20px;font-weight:700}
-.faq-a{max-height:0;overflow:hidden;transition:.35s;color:var(--muted);line-height:1.7;font-size:.9rem}
-.faq-item.open .faq-a{max-height:180px;padding-bottom:22px}.faq-item.open .plus{transform:rotate(45deg)}
-.plus{transition:.25s;color:var(--gold);font-size:1.3rem}
-.contact{background:linear-gradient(135deg,rgba(215,181,109,.12),rgba(131,208,176,.06));border:1px solid var(--line);border-radius:30px;padding:50px;display:flex;justify-content:space-between;gap:30px;align-items:center}
-.contact h2{font:700 clamp(2rem,4vw,3.5rem)/1.05 "Playfair Display";margin:10px 0}
-.contact p{color:var(--muted);max-width:620px;line-height:1.7}
-.footer{padding:45px 0;border-top:1px solid var(--line);margin-top:110px}.footer-inner{display:flex;justify-content:space-between;gap:25px;align-items:center}.footer small{color:var(--muted)}
-.wa-float{position:fixed;z-index:60;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#1fbd69;color:white;box-shadow:0 15px 40px rgba(31,189,105,.3);font-size:1.55rem;transition:.25s}
-.wa-float:hover{transform:translateY(-4px) scale(1.04)}
-.wa-float svg{width:30px;height:30px}
-.wa-label{position:fixed;right:92px;bottom:31px;z-index:59;background:#10251f;border:1px solid var(--line);padding:10px 14px;border-radius:999px;font-size:.76rem;box-shadow:var(--shadow)}
-.drawer-backdrop,.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.62);backdrop-filter:blur(5px);z-index:80;opacity:0;pointer-events:none;transition:.3s}
-.drawer,.modal{position:fixed;z-index:81;background:#0b1c18;border:1px solid var(--line);box-shadow:var(--shadow)}
-.drawer{top:0;right:-440px;width:min(430px,92vw);height:100%;transition:.4s;padding:25px;display:flex;flex-direction:column}
-.drawer.open{right:0}.drawer-backdrop.show,.modal-backdrop.show{opacity:1;pointer-events:auto}
-.drawer-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid var(--line)}
-.close{background:none;color:white;font-size:1.5rem}
-.cart-list{overflow:auto;flex:1;padding:20px 0}.cart-item{display:grid;grid-template-columns:70px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
-.cart-item img{width:70px;height:70px;object-fit:cover;border-radius:12px}.cart-item h4{font-size:.85rem}.cart-item small{color:var(--muted)}
-.qty{display:flex;gap:7px;align-items:center;margin-top:8px}.qty button{width:24px;height:24px;border-radius:7px;background:#183229;color:white}
-.cart-foot{border-top:1px solid var(--line);padding-top:18px}.total{display:flex;justify-content:space-between;font-weight:800;font-size:1.1rem;margin-bottom:15px}
-.empty{text-align:center;color:var(--muted);padding:70px 10px}
-.modal{left:50%;top:50%;transform:translate(-50%,-46%) scale(.97);width:min(880px,92vw);max-height:88vh;overflow:auto;border-radius:26px;opacity:0;pointer-events:none;transition:.3s}
-.modal.show{transform:translate(-50%,-50%) scale(1);opacity:1;pointer-events:auto}
-.modal-grid{display:grid;grid-template-columns:1fr 1fr}.modal-grid img{width:100%;height:100%;min-height:430px;object-fit:cover}.modal-copy{padding:38px}.modal-copy h2{font:700 2.5rem/1.05 "Playfair Display";margin:12px 0}
-.detail-list{display:grid;gap:8px;margin:20px 0}.detail-list div{display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem;padding:9px 0;border-bottom:1px solid var(--line)}.detail-list b{color:#dfe7e2}
-.notice{padding:13px 15px;background:rgba(215,181,109,.08);border:1px solid rgba(215,181,109,.2);color:#d8c8a7;border-radius:14px;font-size:.78rem;line-height:1.55;margin:18px 0}
-.checkout-form{display:grid;gap:10px;margin-top:15px}.checkout-form input,.checkout-form textarea,.checkout-form select{width:100%;background:#081713;border:1px solid var(--line);color:white;border-radius:12px;padding:13px;outline:none}.checkout-form textarea{min-height:80px;resize:vertical}
-.toast{position:fixed;z-index:100;left:50%;bottom:28px;transform:translate(-50%,30px);background:#eaf1ec;color:#0a1713;padding:12px 18px;border-radius:999px;font-weight:700;font-size:.82rem;opacity:0;pointer-events:none;transition:.3s;box-shadow:var(--shadow)}.toast.show{opacity:1;transform:translate(-50%,0)}
+.product-info{padding:20px}.product-meta{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:.74rem;margin-bottom:8px}.product-info h3{font-size:1.15rem;margin-bottom:7px}.product-info p{color:var(--muted);font-size:.82rem;line-height:1.5;min-height:40px}.price{font-size:1.1rem;font-weight:800;color:var(--gold);margin:15px 0}
+.card-actions{display:grid;grid-template-columns:1fr 44px;gap:8px}.icon-btn{border:1px solid var(--line);background:rgba(255,255,255,.03);color:white;border-radius:13px;font-size:1.1rem}.icon-btn:hover{background:rgba(255,255,255,.08)}
+/* Portfolio */
+.portfolio-toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:-12px 0 26px}.portfolio-toolbar p{color:var(--muted);font-size:.82rem}.portfolio-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}.portfolio-card{position:relative;min-height:260px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#0b1c18;grid-column:span 4}.portfolio-card:nth-child(1){grid-column:span 7;min-height:430px}.portfolio-card:nth-child(2){grid-column:span 5;min-height:430px}.portfolio-card:nth-child(3),.portfolio-card:nth-child(4),.portfolio-card:nth-child(5){grid-column:span 4}.portfolio-card img,.portfolio-card video{width:100%;height:100%;object-fit:cover;transition:.55s}.portfolio-card video{display:block;background:#071512}.portfolio-media-fallback{height:100%;display:grid;place-items:center;padding:28px;text-align:center;background:radial-gradient(circle at 50% 35%,rgba(215,181,109,.15),transparent 35%),linear-gradient(145deg,#10251f,#071512);color:#aebdb7}.portfolio-media-fallback strong{display:block;color:#f0f4ef;margin-bottom:6px}.portfolio-media-fallback small{line-height:1.5}.portfolio-card:hover img{transform:scale(1.04)}.portfolio-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;background:linear-gradient(180deg,transparent 35%,rgba(2,10,8,.9) 100%)}.portfolio-type{display:inline-flex;width:max-content;padding:6px 9px;border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.24);backdrop-filter:blur(10px);border-radius:999px;color:var(--gold);font-size:.65rem;text-transform:uppercase;letter-spacing:.12em}.portfolio-overlay h3{font:600 1.35rem/1.15 "Playfair Display",serif;margin:10px 0 5px}.portfolio-overlay p{font-size:.78rem;color:#cad5d0;max-width:450px;line-height:1.5}.portfolio-video{display:grid;place-items:center;height:100%;background:radial-gradient(circle at 45% 35%,rgba(215,181,109,.18),transparent 35%),linear-gradient(145deg,#10251f,#081612);position:relative}.play{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(215,181,109,.45);background:rgba(4,17,14,.65);color:var(--gold);font-size:1.35rem;box-shadow:0 14px 35px rgba(0,0,0,.28)}.portfolio-video small{position:absolute;left:20px;top:18px;color:#b7c6bf;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em}.portfolio-video a{position:absolute;inset:0;display:grid;place-items:center}.trusted-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.trusted-card{min-height:118px;padding:20px 14px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.015));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;transition:.3s}.trusted-card:hover{transform:translateY(-4px);border-color:rgba(215,181,109,.28);background:rgba(255,255,255,.055)}.trusted-card img{width:56px;height:34px;object-fit:contain;filter:grayscale(1) brightness(1.7);opacity:.88}.trusted-card span{font-size:.76rem;font-weight:700;letter-spacing:.06em;color:#ced9d4}.trusted-note{margin-top:14px;color:var(--muted);font-size:.72rem;line-height:1.55}.portfolio-form .file-help{color:var(--muted);font-size:.7rem;line-height:1.45}.portfolio-admin-actions{display:flex;gap:6px;flex-wrap:wrap}.portfolio-admin-item .mini-btn{color:#dfe8e2;background:rgba(255,255,255,.04);border:1px solid var(--line);padding:8px 10px;border-radius:9px;font-size:.72rem}
+.portfolio-note{margin-top:18px;padding:14px 16px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:14px;color:var(--muted);font-size:.78rem;line-height:1.6}.portfolio-note b{color:#dfe8e2}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}.story-img{height:650px;border-radius:30px;overflow:hidden;position:relative}.story-img img{width:100%;height:100%;object-fit:cover}.story-img:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(0,0,0,.65))}.story-copy h2{font:700 clamp(2.3rem,4vw,4.3rem)/1.03 "Playfair Display",serif;margin:16px 0 25px}.story-copy>p{color:var(--muted);line-height:1.85}.checks{display:grid;gap:13px;margin:28px 0}.check{display:flex;gap:12px;align-items:flex-start}.check i{color:var(--gold);font-style:normal}.check span{color:#c5d1cc;font-size:.9rem;line-height:1.55}
+.koi-process{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.process{padding:30px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,#0d211b,#0a1916)}.process-num{font:700 2.5rem "Playfair Display";color:var(--gold);opacity:.7}.process h3{margin:15px 0 8px}.process p{color:var(--muted);font-size:.85rem;line-height:1.7}
+.testimonial{background:linear-gradient(135deg,#102a21,#0a1916);border:1px solid var(--line);border-radius:30px;padding:50px;text-align:center}.quote{font:700 clamp(1.5rem,3vw,2.7rem)/1.35 "Playfair Display",serif;max-width:800px;margin:auto}.quote-by{margin-top:22px;color:var(--gold);font-size:.8rem}
+.faq{max-width:860px;margin:auto}.faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;background:none;color:white;text-align:left;padding:24px 0;display:flex;justify-content:space-between;gap:20px;font-weight:700}.faq-a{max-height:0;overflow:hidden;transition:.35s;color:var(--muted);line-height:1.7;font-size:.9rem}.faq-item.open .faq-a{max-height:180px;padding-bottom:22px}.faq-item.open .plus{transform:rotate(45deg)}.plus{transition:.25s;color:var(--gold);font-size:1.3rem}
+.contact{background:linear-gradient(135deg,rgba(215,181,109,.12),rgba(131,208,176,.06));border:1px solid var(--line);border-radius:30px;padding:50px;display:flex;justify-content:space-between;gap:30px;align-items:center}.contact h2{font:700 clamp(2rem,4vw,3.5rem)/1.05 "Playfair Display";margin:10px 0}.contact p{color:var(--muted);max-width:620px;line-height:1.7}.footer{padding:45px 0;border-top:1px solid var(--line);margin-top:110px}.footer-inner{display:flex;justify-content:space-between;gap:25px;align-items:center}.footer small{color:var(--muted)}
+.wa-float{position:fixed;z-index:60;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#1fbd69;color:white;box-shadow:0 15px 40px rgba(31,189,105,.3);font-size:1.55rem;transition:.25s}.wa-float:hover{transform:translateY(-4px) scale(1.04)}.wa-float svg{width:30px;height:30px}.wa-label{position:fixed;right:92px;bottom:31px;z-index:59;background:#10251f;border:1px solid var(--line);padding:10px 14px;border-radius:999px;font-size:.76rem;box-shadow:var(--shadow)}
+.drawer-backdrop,.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.62);backdrop-filter:blur(5px);z-index:80;opacity:0;pointer-events:none;transition:.3s}.drawer,.modal{position:fixed;z-index:81;background:#0b1c18;border:1px solid var(--line);box-shadow:var(--shadow)}.drawer{top:0;right:-440px;width:min(430px,92vw);height:100%;transition:.4s;padding:25px;display:flex;flex-direction:column}.drawer.open{right:0}.drawer-backdrop.show,.modal-backdrop.show{opacity:1;pointer-events:auto}.drawer-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid var(--line)}.close{background:none;color:white;font-size:1.5rem}.cart-list{overflow:auto;flex:1;padding:20px 0}.cart-item{display:grid;grid-template-columns:70px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}.cart-item img{width:70px;height:70px;object-fit:cover;border-radius:12px}.cart-item h4{font-size:.85rem}.cart-item small{color:var(--muted)}.qty{display:flex;gap:7px;align-items:center;margin-top:8px}.qty button{width:24px;height:24px;border-radius:7px;background:#183229;color:white}.cart-foot{border-top:1px solid var(--line);padding-top:18px}.total{display:flex;justify-content:space-between;font-weight:800;font-size:1.1rem;margin-bottom:15px}.empty{text-align:center;color:var(--muted);padding:70px 10px}
+.modal{left:50%;top:50%;transform:translate(-50%,-46%) scale(.97);width:min(880px,92vw);max-height:88vh;overflow:auto;border-radius:26px;opacity:0;pointer-events:none;transition:.3s}.modal.show{transform:translate(-50%,-50%) scale(1);opacity:1;pointer-events:auto}.modal-grid{display:grid;grid-template-columns:1fr 1fr}.modal-grid img{width:100%;height:100%;min-height:430px;object-fit:cover}.modal-copy{padding:38px}.modal-copy h2{font:700 2.5rem/1.05 "Playfair Display";margin:12px 0}.detail-list{display:grid;gap:8px;margin:20px 0}.detail-list div{display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem;padding:9px 0;border-bottom:1px solid var(--line)}.detail-list b{color:#dfe7e2}.notice{padding:13px 15px;background:rgba(215,181,109,.08);border:1px solid rgba(215,181,109,.2);color:#d8c8a7;border-radius:14px;font-size:.78rem;line-height:1.55;margin:18px 0}.checkout-form,.portfolio-form{display:grid;gap:10px;margin-top:15px}.checkout-form input,.checkout-form textarea,.checkout-form select,.portfolio-form input,.portfolio-form textarea,.portfolio-form select{width:100%;background:#081713;border:1px solid var(--line);color:white;border-radius:12px;padding:13px;outline:none}.checkout-form textarea,.portfolio-form textarea{min-height:80px;resize:vertical}.portfolio-form .form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.portfolio-list{display:grid;gap:10px;margin-top:18px;max-height:300px;overflow:auto}.portfolio-admin-item{display:grid;grid-template-columns:62px 1fr auto;gap:10px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}.portfolio-admin-item img{width:62px;height:50px;object-fit:cover;border-radius:9px}.portfolio-admin-item strong{display:block;font-size:.8rem}.portfolio-admin-item small{color:var(--muted);font-size:.68rem}.danger-btn{color:#ffc4bc;background:rgba(255,124,105,.08);border:1px solid rgba(255,124,105,.18);padding:8px 10px;border-radius:9px;font-size:.72rem}
+.toast{position:fixed;z-index:100;left:50%;bottom:28px;transform:translate(-50%,30px);background:#eaf1ec;color:#0a1713;padding:12px 18px;border-radius:999px;font-weight:700;font-size:.82rem;opacity:0;pointer-events:none;transition:.3s;box-shadow:var(--shadow);text-align:center;max-width:90vw}.toast.show{opacity:1;transform:translate(-50%,0)}
 .reveal{opacity:1;transform:none}
-@media(max-width:900px){
- .nav-links{display:none}.menu-btn{display:block}.features{grid-template-columns:1fr 1fr}.product-grid{grid-template-columns:1fr 1fr}.story{grid-template-columns:1fr;gap:35px}.story-img{height:470px}.koi-process{grid-template-columns:1fr}.contact{flex-direction:column;align-items:flex-start}
+@media(max-width:980px){
+ .nav-links{display:none;position:absolute;left:4%;right:4%;top:76px;padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(7,22,18,.96);backdrop-filter:blur(18px);flex-direction:column;gap:3px}.nav-links.open{display:flex}.nav-links a{padding:12px 10px;border-radius:10px}.nav-links a:hover{background:rgba(255,255,255,.05)}
+ .menu-btn{display:block}.features{grid-template-columns:1fr 1fr}.product-grid{grid-template-columns:1fr 1fr}.story{grid-template-columns:1fr;gap:35px}.story-img{height:470px}.koi-process{grid-template-columns:1fr}.contact{flex-direction:column;align-items:flex-start}.portfolio-card,.portfolio-card:nth-child(n){grid-column:span 6}.trusted-grid{grid-template-columns:repeat(3,1fr)}.portfolio-card:nth-child(1),.portfolio-card:nth-child(2){min-height:360px}
 }
 @media(max-width:620px){
- .section{padding:80px 0}.hero h1{font-size:3.6rem}.hero-stats{gap:20px}.stat strong{font-size:1.05rem}.features{grid-template-columns:1fr}.feature{border-right:0;border-bottom:1px solid var(--line)}.feature:last-child{border-bottom:0}
- .product-grid{grid-template-columns:1fr}.product-img{height:290px}.section-head{display:block}.section-head p{margin-top:15px}.modal-grid{grid-template-columns:1fr}.modal-grid img{min-height:280px;max-height:340px}.modal-copy{padding:25px}.modal-copy h2{font-size:2rem}.wa-label{display:none}.footer-inner{flex-direction:column;align-items:flex-start}
+ .container{width:min(100% - 28px,1180px)}.navbar{padding:12px 0}.logo{gap:9px;font-size:.9rem}.logo-mark{width:34px;height:34px}.nav-actions .btn-primary{display:none}.cart-btn{padding:10px 13px;font-size:.78rem}.hero{min-height:92svh;padding-top:92px}.hero-media{background-image:linear-gradient(180deg,rgba(4,16,13,.86) 0%,rgba(4,16,13,.72) 35%,rgba(4,16,13,.62) 75%,rgba(4,16,13,.94) 100%),url("https://images.unsplash.com/photo-1659850656904-ceb80a148545?auto=format&fit=crop&w=1400&q=80")}.hero-content{max-width:100%}.hero h1{font-size:clamp(3rem,15vw,4.45rem);line-height:.92}.hero p{font-size:.92rem;line-height:1.7}.hero-actions{display:grid;grid-template-columns:1fr;max-width:360px}.hero-actions .btn{width:100%}.hero-stats{gap:18px;margin-top:38px}.stat strong{font-size:1rem}.scroll-note{display:none}
+ .feature-strip{margin-top:-28px}.features{grid-template-columns:1fr}.feature{border-right:0;border-bottom:1px solid var(--line);padding:18px}.feature:last-child{border-bottom:0}.section{padding:72px 0}.section-head{display:block;margin-bottom:28px}.section-head p{margin-top:14px;font-size:.88rem}.product-grid{grid-template-columns:1fr}.product-img{height:275px}.product-card:hover{transform:none}
+ .portfolio-toolbar{display:block}.portfolio-toolbar .btn{margin-top:12px;width:100%}.portfolio-grid{grid-template-columns:1fr;gap:12px}.portfolio-card,.portfolio-card:nth-child(n){grid-column:auto;min-height:300px}.trusted-grid{grid-template-columns:repeat(2,1fr)}.portfolio-card:nth-child(1),.portfolio-card:nth-child(2){min-height:330px}.portfolio-overlay{padding:18px}.portfolio-overlay h3{font-size:1.2rem}
+ .story-img{height:360px}.story-copy h2{font-size:2.7rem}.contact{padding:30px 24px}.wa-label{display:none}.footer{margin-top:70px}.footer-inner{flex-direction:column;align-items:flex-start}.modal-grid{grid-template-columns:1fr}.modal-grid img{min-height:270px;max-height:330px}.modal-copy{padding:24px}.modal-copy h2{font-size:2rem}.modal{width:94vw;max-height:90vh}.portfolio-form .form-row{grid-template-columns:1fr}.portfolio-admin-item{grid-template-columns:52px 1fr auto}.portfolio-admin-item img{width:52px;height:46px}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
 </style>
@@ -141,16 +104,14 @@ img{max-width:100%;display:block}
 <body>
 <header class="navbar" id="navbar">
   <div class="container nav-inner">
-    <a class="logo" href="#home" aria-label="IHSAN Koi">
-      <span class="logo-mark"></span><span>IHSAN KOI</span>
-    </a>
-    <nav class="nav-links">
-      <a href="#koleksi">Koleksi</a><a href="#tentang">Tentang</a><a href="#proses">Cara Order</a><a href="#faq">FAQ</a>
+    <a class="logo" href="#home" aria-label="IHSAN Koi"><span class="logo-mark"></span><span>IHSAN KOI</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#koleksi">Koleksi</a><a href="#portfolio">Portofolio</a><a href="#trusted">Dipercayai</a><a href="#tentang">Tentang</a><a href="#proses">Cara Order</a><a href="#faq">FAQ</a>
     </nav>
     <div class="nav-actions">
       <button class="btn btn-ghost cart-btn" id="cartOpen">Keranjang <span class="badge" id="cartCount">0</span></button>
       <a class="btn btn-primary" href="#koleksi">Belanja</a>
-      <button class="menu-btn" id="menuBtn">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">☰</button>
     </div>
   </div>
 </header>
@@ -162,170 +123,84 @@ img{max-width:100%;display:block}
     <div class="eyebrow reveal">Koi • Ornamental Fish • Aquatic Living</div>
     <h1 class="reveal">Keindahan air,<br><span>dipilih dengan hati.</span></h1>
     <p class="reveal">Koleksi koi dan ikan hias pilihan untuk kolam serta aquarium Anda. Lihat stok, pilih ikan, masukkan ke keranjang, lalu konfirmasi pesanan langsung bersama tim IHSAN Koi melalui WhatsApp.</p>
-    <div class="hero-actions reveal">
-      <a href="#koleksi" class="btn btn-primary">Jelajahi Koleksi →</a>
-      <a href="#tentang" class="btn btn-ghost">Kenapa IHSAN Koi?</a>
-    </div>
-    <div class="hero-stats reveal">
-      <div class="stat"><strong>Koi</strong><span>Grade pilihan</span></div>
-      <div class="stat"><strong>Hias</strong><span>Beragam karakter</span></div>
-      <div class="stat"><strong>WA</strong><span>Konfirmasi langsung</span></div>
-    </div>
+    <div class="hero-actions reveal"><a href="#koleksi" class="btn btn-primary">Jelajahi Koleksi →</a><a href="#portfolio" class="btn btn-ghost">Lihat Portofolio</a></div>
+    <div class="hero-stats reveal"><div class="stat"><strong>Koi</strong><span>Grade pilihan</span></div><div class="stat"><strong>Hias</strong><span>Beragam karakter</span></div><div class="stat"><strong>WA</strong><span>Konfirmasi langsung</span></div></div>
   </div>
   <div class="scroll-note">SCROLL TO EXPLORE ↓</div>
 </section>
 
-<div class="container feature-strip">
-  <div class="features reveal">
-    <div class="feature"><b>Seleksi Visual</b><span>Foto dan detail ikan membantu Anda memilih sebelum order.</span></div>
-    <div class="feature"><b>Stok Terukur</b><span>Keranjang memperhitungkan stok yang tersedia di katalog.</span></div>
-    <div class="feature"><b>Konfirmasi WA</b><span>Pesanan diteruskan ke CS untuk cek stok & ongkir.</span></div>
-    <div class="feature"><b>Pengiriman Aman</b><span>Detail packing dan pengiriman dibahas sebelum transaksi.</span></div>
-  </div>
-</div>
+<div class="container feature-strip"><div class="features reveal">
+  <div class="feature"><b>Seleksi Visual</b><span>Foto dan detail ikan membantu Anda memilih sebelum order.</span></div>
+  <div class="feature"><b>Stok Terukur</b><span>Keranjang memperhitungkan stok yang tersedia di katalog.</span></div>
+  <div class="feature"><b>Konfirmasi WA</b><span>Pesanan diteruskan ke CS untuk cek stok & ongkir.</span></div>
+  <div class="feature"><b>Pengiriman Aman</b><span>Detail packing dan pengiriman dibahas sebelum transaksi.</span></div>
+</div></div>
 
-<section class="section" id="koleksi">
-  <div class="container">
-    <div class="section-head reveal">
-      <div><div class="eyebrow">Curated Collection</div><h2>Pilih penghuni air yang cocok untuk ruang Anda.</h2></div>
-      <p>Gunakan filter untuk menemukan koi atau ikan hias. Harga di katalog adalah contoh tampilan dan dapat disesuaikan dengan stok nyata.</p>
-    </div>
-    <div class="filters reveal" id="filters">
-      <button class="filter active" data-filter="all">Semua</button>
-      <button class="filter" data-filter="koi">Koi</button>
-      <button class="filter" data-filter="hias">Ikan Hias</button>
-      <button class="filter" data-filter="premium">Premium</button>
-      <button class="filter" data-filter="aquarium">Aquarium</button>
-    </div>
-    <div class="product-grid" id="productGrid"></div>
-  </div>
-</section>
+<section class="section" id="koleksi"><div class="container">
+  <div class="section-head reveal"><div><div class="eyebrow">Curated Collection</div><h2>Pilih penghuni air yang cocok untuk ruang Anda.</h2></div><p>Gunakan filter untuk menemukan koi atau ikan hias. Struktur katalog mudah diperbarui sesuai stok nyata.</p></div>
+  <div class="filters reveal" id="filters"><button class="filter active" data-filter="all">Semua</button><button class="filter" data-filter="koi">Koi</button><button class="filter" data-filter="hias">Ikan Hias</button><button class="filter" data-filter="premium">Premium</button><button class="filter" data-filter="aquarium">Aquarium</button></div>
+  <div class="product-grid" id="productGrid"></div>
+</div></section>
 
-<section class="section" id="tentang">
-  <div class="container story">
-    <div class="story-img reveal"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=85" alt="Aquarium dengan ikan hias" loading="lazy"></div>
-    <div class="story-copy reveal">
-      <div class="eyebrow">The IHSAN Standard</div>
-      <h2>Bukan sekadar menjual ikan. Kami membantu memilih kehidupan yang tepat.</h2>
-      <p>IHSAN Koi dirancang sebagai toko aquatic yang terasa premium tetapi tetap mudah digunakan. Setiap produk memiliki kategori, ukuran, karakter, dan catatan perawatan agar calon pembeli punya konteks sebelum menghubungi kami.</p>
-      <div class="checks">
-        <div class="check"><i>✦</i><span><b>Seleksi & transparansi.</b> Informasi ikan dibuat jelas sebelum pembeli melakukan konfirmasi.</span></div>
-        <div class="check"><i>✦</i><span><b>Customer-first.</b> Checkout tidak memaksa pembayaran otomatis; pesanan dikonfirmasi manusia melalui WhatsApp.</span></div>
-        <div class="check"><i>✦</i><span><b>Siap berkembang.</b> Struktur katalog bisa diperluas menjadi stok real-time, pembayaran online, dan dashboard admin.</span></div>
-      </div>
-      <a href="#proses" class="btn btn-primary">Lihat Alur Pembelian</a>
-    </div>
+<section class="section" id="trusted"><div class="container">
+  <div class="section-head reveal"><div><div class="eyebrow">Trusted By</div><h2>Dipercayai oleh brand & komunitas aquatic.</h2></div><p>Logo berikut adalah materi demo non-komersial untuk memberi gambaran tampilan area partner/brand pada website.</p></div>
+  <div class="trusted-grid reveal">
+    <div class="trusted-card"><img src="https://cdn.simpleicons.org/oase/FFFFFF" alt="OASE logo"><span>OASE</span></div>
+    <div class="trusted-card"><img src="https://cdn.simpleicons.org/tetra/FFFFFF" alt="Tetra logo"><span>TETRA</span></div>
+    <div class="trusted-card"><img src="https://cdn.simpleicons.org/seachem/FFFFFF" alt="Seachem logo"><span>SEACHEM</span></div>
+    <div class="trusted-card"><img src="https://cdn.simpleicons.org/hikari/FFFFFF" alt="Hikari logo"><span>HIKARI</span></div>
+    <div class="trusted-card"><img src="https://cdn.simpleicons.org/sera/FFFFFF" alt="Sera logo"><span>SERA</span></div>
+    <div class="trusted-card"><img src="https://cdn.simpleicons.org/dennerle/FFFFFF" alt="Dennerle logo"><span>DENNERLE</span></div>
   </div>
-</section>
+  <div class="trusted-note">Contoh tampilan saja — ganti dengan logo klien/partner yang benar-benar bekerja sama sebelum dipublikasikan.</div>
+</div></section>
 
-<section class="section" id="proses">
-  <div class="container">
-    <div class="section-head reveal">
-      <div><div class="eyebrow">Simple Transaction Flow</div><h2>Belanja online, keputusan tetap manusiawi.</h2></div>
-      <p>Sistem ini menggunakan WhatsApp sebagai tahap konfirmasi akhir sehingga harga, stok, ongkir, kondisi ikan, dan jadwal pengiriman dapat diverifikasi terlebih dahulu.</p>
-    </div>
-    <div class="koi-process">
-      <div class="process reveal"><div class="process-num">01</div><h3>Pilih ikan</h3><p>Jelajahi katalog, buka detail, tentukan jumlah, lalu tambahkan ke keranjang.</p></div>
-      <div class="process reveal"><div class="process-num">02</div><h3>Checkout</h3><p>Isi nama, area pengiriman, dan catatan. Sistem menghitung subtotal keranjang.</p></div>
-      <div class="process reveal"><div class="process-num">03</div><h3>Konfirmasi WA</h3><p>Pesanan dibuat menjadi pesan WhatsApp. CS mengecek stok, ongkir, packing, dan total final.</p></div>
-    </div>
-    <div class="notice reveal" style="margin-top:18px">⚠️ <b>Pemberitahuan transaksi:</b> katalog ini belum melakukan pembayaran otomatis. Jangan transfer sebelum detail pesanan, ketersediaan ikan, total akhir, dan rekening/metode pembayaran dikonfirmasi oleh pihak IHSAN Koi.</div>
-  </div>
-</section>
+<section class="section" id="portfolio"><div class="container">
+  <div class="section-head reveal"><div><div class="eyebrow">Aquatic Portfolio</div><h2>Galeri visual untuk menunjukkan karakter ikan, kolam, dan aquarium.</h2></div><p>Portofolio dibuat terpisah dari katalog produk sehingga foto/video contoh bisa diganti tanpa mengubah sistem keranjang.</p></div>
+  <div class="portfolio-toolbar reveal"><p>Galeri ini dikelola dari halaman admin terpisah sehingga pengunjung hanya melihat hasil akhirnya.</p></div>
+  <div class="portfolio-grid" id="portfolioGrid"></div>
+  <div class="portfolio-note"><b>Catatan pengelolaan:</b> untuk gambar gunakan URL gambar langsung (mis. CDN/Unsplash). Untuk video, gunakan URL MP4 langsung agar tampil sebagai player; bila memakai link halaman Pixabay/Pexels, item akan tampil sebagai kartu video yang membuka sumber stok tersebut.</div>
+</div></section>
 
-<section class="section">
-  <div class="container">
-    <div class="testimonial reveal">
-      <div class="eyebrow">IHSAN Koi Philosophy</div>
-      <div class="quote">“Kolam yang indah dimulai dari pilihan yang tepat — bukan dari ikan yang paling mahal.”</div>
-      <div class="quote-by">IHSAN KOI • AQUATIC LIVING</div>
-    </div>
+<section class="section" id="tentang"><div class="container story">
+  <div class="story-img reveal"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Koi%20(Unsplash).jpg?width=1400" alt="Koi berwarna di kolam" loading="lazy"></div>
+  <div class="story-copy reveal"><div class="eyebrow">The IHSAN Standard</div><h2>Bukan sekadar menjual ikan. Kami membantu memilih kehidupan yang tepat.</h2>
+    <p>IHSAN Koi dirancang sebagai toko aquatic yang terasa premium tetapi tetap mudah digunakan. Setiap produk memiliki kategori, ukuran, karakter, dan catatan perawatan agar calon pembeli punya konteks sebelum menghubungi kami.</p>
+    <div class="checks"><div class="check"><i>✦</i><span><b>Seleksi & transparansi.</b> Informasi ikan dibuat jelas sebelum pembeli melakukan konfirmasi.</span></div><div class="check"><i>✦</i><span><b>Customer-first.</b> Checkout tidak memaksa pembayaran otomatis; pesanan dikonfirmasi manusia melalui WhatsApp.</span></div><div class="check"><i>✦</i><span><b>Siap berkembang.</b> Struktur katalog bisa diperluas menjadi stok real-time, pembayaran online, dan dashboard admin.</span></div></div>
+    <a href="#proses" class="btn btn-primary">Lihat Alur Pembelian</a>
   </div>
-</section>
+</div></section>
 
-<section class="section" id="faq">
-  <div class="container">
-    <div class="section-head reveal">
-      <div><div class="eyebrow">Need To Know</div><h2>Pertanyaan sebelum membeli?</h2></div>
-      <p>Jawaban dasar untuk membuat proses pemesanan ikan lebih aman dan jelas.</p>
-    </div>
-    <div class="faq">
-      <div class="faq-item reveal"><button class="faq-q">Apakah harga di website sudah termasuk ongkir?<span class="plus">+</span></button><div class="faq-a">Belum. Harga katalog adalah harga ikan. Ongkir, packing, dan metode pengiriman dikonfirmasi setelah alamat/area tujuan diketahui.</div></div>
-      <div class="faq-item reveal"><button class="faq-q">Apakah ikan yang saya pilih pasti tersedia?<span class="plus">+</span></button><div class="faq-a">Belum tentu, karena stok ikan dapat berubah. Karena itu checkout diteruskan ke WhatsApp agar CS melakukan pengecekan stok sebelum pembayaran.</div></div>
-      <div class="faq-item reveal"><button class="faq-q">Bagaimana cara pesan koi tertentu?<span class="plus">+</span></button><div class="faq-a">Buka detail produk dan tambahkan ke keranjang. Sertakan catatan seperti ukuran, pola, atau permintaan ikan tertentu pada form checkout.</div></div>
-      <div class="faq-item reveal"><button class="faq-q">Apakah bisa konsultasi aquarium?<span class="plus">+</span></button><div class="faq-a">Bisa. Gunakan tombol WhatsApp Customer Service untuk mendiskusikan ukuran aquarium, jenis ikan, kebutuhan air, dekorasi, atau kombinasi ikan.</div></div>
-      <div class="faq-item reveal"><button class="faq-q">Apakah website ini sudah menerima pembayaran otomatis?<span class="plus">+</span></button><div class="faq-a">Versi ini sengaja memakai konfirmasi WhatsApp. Integrasi payment gateway dan database stok dapat ditambahkan kemudian jika toko sudah siap memakai sistem transaksi online penuh.</div></div>
-    </div>
-  </div>
-</section>
+<section class="section" id="proses"><div class="container">
+  <div class="section-head reveal"><div><div class="eyebrow">Simple Transaction Flow</div><h2>Belanja online, keputusan tetap manusiawi.</h2></div><p>Sistem ini menggunakan WhatsApp sebagai tahap konfirmasi akhir sehingga harga, stok, ongkir, kondisi ikan, dan jadwal pengiriman dapat diverifikasi terlebih dahulu.</p></div>
+  <div class="koi-process"><div class="process reveal"><div class="process-num">01</div><h3>Pilih ikan</h3><p>Jelajahi katalog, buka detail, tentukan jumlah, lalu tambahkan ke keranjang.</p></div><div class="process reveal"><div class="process-num">02</div><h3>Checkout</h3><p>Isi nama, area pengiriman, dan catatan. Sistem menghitung subtotal keranjang.</p></div><div class="process reveal"><div class="process-num">03</div><h3>Konfirmasi WA</h3><p>Pesanan dibuat menjadi pesan WhatsApp. CS mengecek stok, ongkir, packing, dan total final.</p></div></div>
+  <div class="notice reveal" style="margin-top:18px">⚠️ <b>Pemberitahuan transaksi:</b> katalog ini belum melakukan pembayaran otomatis. Jangan transfer sebelum detail pesanan, ketersediaan ikan, total akhir, dan rekening/metode pembayaran dikonfirmasi oleh pihak IHSAN Koi.</div>
+</div></section>
 
-<section class="section">
-  <div class="container contact reveal">
-    <div><div class="eyebrow">Customer Service</div><h2>Butuh bantuan memilih ikan?</h2><p>Kirim kebutuhan Anda. Tim IHSAN Koi bisa membantu mengarahkan pilihan berdasarkan jenis aquarium/kolam, ukuran, dan budget.</p></div>
-    <a class="btn btn-primary" id="contactWa" target="_blank" rel="noopener">Chat WhatsApp ↗</a>
-  </div>
-</section>
+<section class="section"><div class="container"><div class="testimonial reveal"><div class="eyebrow">IHSAN Koi Philosophy</div><div class="quote">“Kolam yang indah dimulai dari pilihan yang tepat — bukan dari ikan yang paling mahal.”</div><div class="quote-by">IHSAN KOI • AQUATIC LIVING</div></div></div></section>
+
+<section class="section" id="faq"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">Need To Know</div><h2>Pertanyaan sebelum membeli?</h2></div><p>Jawaban dasar untuk membuat proses pemesanan ikan lebih aman dan jelas.</p></div><div class="faq">
+  <div class="faq-item reveal"><button class="faq-q">Apakah harga di website sudah termasuk ongkir?<span class="plus">+</span></button><div class="faq-a">Belum. Harga katalog adalah harga ikan. Ongkir, packing, dan metode pengiriman dikonfirmasi setelah alamat/area tujuan diketahui.</div></div>
+  <div class="faq-item reveal"><button class="faq-q">Apakah ikan yang saya pilih pasti tersedia?<span class="plus">+</span></button><div class="faq-a">Belum tentu, karena stok ikan dapat berubah. Karena itu checkout diteruskan ke WhatsApp agar CS melakukan pengecekan stok sebelum pembayaran.</div></div>
+  <div class="faq-item reveal"><button class="faq-q">Bagaimana cara pesan koi tertentu?<span class="plus">+</span></button><div class="faq-a">Buka detail produk dan tambahkan ke keranjang. Sertakan catatan seperti ukuran, pola, atau permintaan ikan tertentu pada form checkout.</div></div>
+  <div class="faq-item reveal"><button class="faq-q">Apakah bisa konsultasi aquarium?<span class="plus">+</span></button><div class="faq-a">Bisa. Gunakan tombol WhatsApp Customer Service untuk mendiskusikan ukuran aquarium, jenis ikan, kebutuhan air, dekorasi, atau kombinasi ikan.</div></div>
+  <div class="faq-item reveal"><button class="faq-q">Apakah website ini sudah menerima pembayaran otomatis?<span class="plus">+</span></button><div class="faq-a">Versi ini sengaja memakai konfirmasi WhatsApp. Integrasi payment gateway dan database stok dapat ditambahkan kemudian jika toko sudah siap memakai sistem transaksi online penuh.</div></div>
+</div></div></section>
+
+<section class="section"><div class="container contact reveal"><div><div class="eyebrow">Customer Service</div><h2>Butuh bantuan memilih ikan?</h2><p>Kirim kebutuhan Anda. Tim IHSAN Koi bisa membantu mengarahkan pilihan berdasarkan jenis aquarium/kolam, ukuran, dan budget.</p></div><a class="btn btn-primary" id="contactWa" target="_blank" rel="noopener">Chat WhatsApp ↗</a></div></section>
 </main>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="logo"><span class="logo-mark"></span><span>IHSAN KOI</span></div>
-    <small>© <span id="year"></span> IHSAN Koi. Aquatic living, thoughtfully selected.</small>
-  </div>
-</footer>
+<footer class="footer"><div class="container footer-inner"><div class="logo"><span class="logo-mark"></span><span>IHSAN KOI</span></div><small>© <span id="year"></span> IHSAN Koi. Aquatic living, thoughtfully selected.</small></div></footer>
 
-<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Customer Service WhatsApp" title="Customer Service WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M4 13a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-    <path d="M4.5 13.2v3.1A2.2 2.2 0 0 0 6.7 18.5h.8v-6H6.7a2.2 2.2 0 0 0-2.2 2.2Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
-    <path d="M19.5 13.2v3.1a2.2 2.2 0 0 1-2.2 2.2h-.8v-6h.8a2.2 2.2 0 0 1 2.2 2.2Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
-    <path d="M17 19c-.8 1.2-2.1 1.8-4 1.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-  </svg>
-</a>
-<div class="wa-label">Customer Service</div>
+<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Customer Service WhatsApp" title="Customer Service WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M4.5 13.2v3.1A2.2 2.2 0 0 0 6.7 18.5h.8v-6H6.7a2.2 2.2 0 0 0-2.2 2.2Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M19.5 13.2v3.1a2.2 2.2 0 0 1-2.2 2.2h-.8v-6h.8a2.2 2.2 0 0 1 2.2 2.2Z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M17 19c-.8 1.2-2.1 1.8-4 1.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a><div class="wa-label">Customer Service</div>
 
-<div class="drawer-backdrop" id="drawerBackdrop"></div>
-<aside class="drawer" id="drawer" aria-label="Keranjang">
-  <div class="drawer-head"><strong>Keranjang Anda</strong><button class="close" id="cartClose">×</button></div>
-  <div class="cart-list" id="cartList"></div>
-  <div class="cart-foot">
-    <div class="total"><span>Subtotal</span><span id="cartTotal">Rp0</span></div>
-    <button class="btn btn-primary" style="width:100%" id="checkoutBtn">Lanjut Checkout →</button>
-    <div class="notice">Harga akhir, stok, ongkir, dan metode pembayaran dikonfirmasi oleh CS melalui WhatsApp.</div>
-  </div>
-</aside>
+<div class="drawer-backdrop" id="drawerBackdrop"></div><aside class="drawer" id="drawer" aria-label="Keranjang"><div class="drawer-head"><strong>Keranjang Anda</strong><button class="close" id="cartClose">×</button></div><div class="cart-list" id="cartList"></div><div class="cart-foot"><div class="total"><span>Subtotal</span><span id="cartTotal">Rp0</span></div><button class="btn btn-primary" style="width:100%" id="checkoutBtn">Lanjut Checkout →</button><div class="notice">Harga akhir, stok, ongkir, dan metode pembayaran dikonfirmasi oleh CS melalui WhatsApp.</div></div></aside>
 
 <div class="modal-backdrop" id="modalBackdrop"></div>
-<div class="modal" id="productModal">
-  <div class="modal-grid">
-    <img id="modalImg" src="" alt="">
-    <div class="modal-copy">
-      <button class="close" id="modalClose" style="float:right">×</button>
-      <div class="eyebrow" id="modalCat"></div><h2 id="modalTitle"></h2>
-      <p id="modalDesc" style="color:var(--muted);line-height:1.7"></p>
-      <div class="detail-list" id="modalDetails"></div>
-      <div class="price" id="modalPrice"></div>
-      <button class="btn btn-primary" style="width:100%" id="modalAdd">+ Tambahkan ke Keranjang</button>
-      <div class="notice">Ikan hidup dapat memiliki perbedaan visual dari foto. Ketersediaan dan kondisi terbaru dikonfirmasi sebelum transaksi.</div>
-    </div>
-  </div>
-</div>
+<div class="modal" id="productModal"><div class="modal-grid"><img id="modalImg" src="" alt=""><div class="modal-copy"><button class="close" id="modalClose" style="float:right">×</button><div class="eyebrow" id="modalCat"></div><h2 id="modalTitle"></h2><p id="modalDesc" style="color:var(--muted);line-height:1.7"></p><div class="detail-list" id="modalDetails"></div><div class="price" id="modalPrice"></div><button class="btn btn-primary" style="width:100%" id="modalAdd">+ Tambahkan ke Keranjang</button><div class="notice">Ikan hidup dapat memiliki perbedaan visual dari foto. Ketersediaan dan kondisi terbaru dikonfirmasi sebelum transaksi.</div></div></div></div>
 
-<div class="modal" id="checkoutModal">
-  <div class="modal-copy">
-    <button class="close" id="checkoutClose" style="float:right">×</button>
-    <div class="eyebrow">Checkout</div><h2>Konfirmasi Pesanan</h2>
-    <p style="color:var(--muted);line-height:1.6">Isi data singkat. Setelah menekan tombol, WhatsApp akan terbuka dengan format pesanan otomatis.</p>
-    <form class="checkout-form" id="checkoutForm">
-      <input id="custName" required placeholder="Nama lengkap">
-      <input id="custArea" required placeholder="Kota / area pengiriman">
-      <select id="delivery"><option value="Kurir">Kurir / pengiriman</option><option value="Ambil sendiri">Ambil sendiri</option><option value="Diskusi dengan CS">Diskusi dengan CS</option></select>
-      <textarea id="custNote" placeholder="Catatan: ukuran, pola koi, permintaan khusus, dll."></textarea>
-      <button class="btn btn-primary" type="submit">Buat Pesanan via WhatsApp ↗</button>
-    </form>
-    <div class="notice">Jangan melakukan pembayaran sebelum CS mengonfirmasi stok, total final, ongkir/packing, dan detail pembayaran.</div>
-  </div>
-</div>
+<div class="modal" id="checkoutModal"><div class="modal-copy"><button class="close" id="checkoutClose" style="float:right">×</button><div class="eyebrow">Checkout</div><h2>Konfirmasi Pesanan</h2><p style="color:var(--muted);line-height:1.6">Isi data singkat. Setelah menekan tombol, WhatsApp akan terbuka dengan format pesanan otomatis.</p><form class="checkout-form" id="checkoutForm"><input id="custName" required placeholder="Nama lengkap"><input id="custArea" required placeholder="Kota / area pengiriman"><select id="delivery"><option value="Kurir">Kurir / pengiriman</option><option value="Ambil sendiri">Ambil sendiri</option><option value="Diskusi dengan CS">Diskusi dengan CS</option></select><textarea id="custNote" placeholder="Catatan: ukuran, pola koi, permintaan khusus, dll."></textarea><button class="btn btn-primary" type="submit">Buat Pesanan via WhatsApp ↗</button></form><div class="notice">Jangan melakukan pembayaran sebelum CS mengonfirmasi stok, total final, ongkir/packing, dan detail pembayaran.</div></div></div>
+
 
 <div class="toast" id="toast"></div>
 
@@ -334,143 +209,84 @@ img{max-width:100%;display:block}
 <script>
 /* =========================
    IHSAN KOI CONFIG
-   Ganti nomor berikut dengan nomor WhatsApp bisnis Anda.
-   Format: 628xxxxxxxxxx (tanpa +, spasi, atau 0 di depan)
+   1) Nomor WhatsApp: format 628xxxxxxxxxx.
+   2) Media portofolio awal ada di PORTFOLIO_ITEMS.
+   3) URL foto stok contoh di bawah berasal dari Unsplash/Wikimedia.
+   4) Video demo memakai halaman stok Pixabay; ganti dengan URL MP4 langsung jika ingin player di dalam halaman.
 ========================= */
 const WA_NUMBER = "628111182094";
+const STOCK = {
+  koiHero: "https://images.unsplash.com/photo-1753714075484-ef18b6b07af9?auto=format&fit=crop&w=2200&q=86",
+  koi: "https://images.unsplash.com/photo-1659850656904-ceb80a148545?auto=format&fit=crop&w=1400&q=82",
+  koiHawaii: "https://images.unsplash.com/photo-1753714075484-ef18b6b07af9?auto=format&fit=crop&w=1600&q=84",
+  koiLily: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+};
 
 const products = [
- {id:1,name:"Kohaku Select",cat:"koi",tags:["koi","premium"],price:850000,stock:3,size:"18–20 cm",type:"Kohaku",grade:"Select",img:"https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=1000&q=85",desc:"Koi Kohaku dengan karakter warna merah-putih yang bersih dan elegan."},
- {id:2,name:"Sanke Classic",cat:"koi",tags:["koi"],price:650000,stock:5,size:"16–18 cm",type:"Sanke",grade:"A",img:"https://images.unsplash.com/photo-1516684669134-de6f7c473a2a?auto=format&fit=crop&w=1000&q=85",desc:"Pilihan Sanke untuk kolektor yang menyukai komposisi putih, merah, dan hitam."},
- {id:3,name:"Showa Premium",cat:"koi",tags:["koi","premium"],price:1250000,stock:2,size:"20–23 cm",type:"Showa",grade:"Premium",img:"https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&w=1000&q=85",desc:"Showa dengan karakter bold dan kontras kuat untuk menjadi focal point kolam."},
- {id:4,name:"Oranda Red White",cat:"hias",tags:["hias","aquarium"],price:185000,stock:7,size:"8–10 cm",type:"Oranda",grade:"A",img:"https://images.unsplash.com/photo-1524704654690-b56c05c78a00?auto=format&fit=crop&w=1000&q=85",desc:"Ikan hias dengan bentuk kepala khas dan warna merah-putih yang menarik."},
- {id:5,name:"Flowerhorn Select",cat:"hias",tags:["hias","premium"],price:450000,stock:4,size:"12–14 cm",type:"Flowerhorn",grade:"Select",img:"https://images.unsplash.com/photo-1520302519878-0b9e9d8d2a4b?auto=format&fit=crop&w=1000&q=85",desc:"Karakter kuat untuk aquarium display dengan kebutuhan ruang yang sesuai."},
- {id:6,name:"Neon Community Pack",cat:"hias",tags:["hias","aquarium"],price:75000,stock:12,size:"3–4 cm",type:"Neon Tetra",grade:"Community",img:"https://images.unsplash.com/photo-1520990269335-927fbdcf7d6f?auto=format&fit=crop&w=1000&q=85",desc:"Pilihan schooling fish untuk aquarium komunitas dengan tampilan berkilau."}
+ {id:1,name:"Kohaku Select",cat:"koi",tags:["koi","premium"],price:850000,stock:3,size:"18–20 cm",type:"Kohaku",grade:"Select",img:STOCK.koiHawaii,desc:"Koi Kohaku dengan karakter warna merah-putih yang bersih dan elegan."},
+ {id:2,name:"Sanke Classic",cat:"koi",tags:["koi"],price:650000,stock:5,size:"16–18 cm",type:"Sanke",grade:"A",img:STOCK.koi,desc:"Pilihan Sanke untuk kolektor yang menyukai komposisi putih, merah, dan hitam."},
+ {id:3,name:"Showa Premium",cat:"koi",tags:["koi","premium"],price:1250000,stock:2,size:"20–23 cm",type:"Showa",grade:"Premium",img:STOCK.koiHero,desc:"Showa dengan karakter bold dan kontras kuat untuk menjadi focal point kolam."},
+ {id:4,name:"Oranda Red White",cat:"hias",tags:["hias","aquarium"],price:185000,stock:7,size:"8–10 cm",type:"Oranda",grade:"A",img:STOCK.koiLily,desc:"Ikan hias dengan bentuk kepala khas dan warna merah-putih yang menarik."},
+ {id:5,name:"Flowerhorn Select",cat:"hias",tags:["hias","premium"],price:450000,stock:4,size:"12–14 cm",type:"Flowerhorn",grade:"Select",img:STOCK.koiHero,desc:"Karakter kuat untuk aquarium display dengan kebutuhan ruang yang sesuai."},
+ {id:6,name:"Neon Community Pack",cat:"hias",tags:["hias","aquarium"],price:75000,stock:12,size:"3–4 cm",type:"Community Fish",grade:"Community",img:STOCK.koiLily,desc:"Pilihan schooling fish untuk aquarium komunitas dengan tampilan berkilau."}
 ];
 
+let portfolio = [];
 let cart = JSON.parse(localStorage.getItem("ihsanKoiCart") || "[]");
 let currentProduct = null;
-
 const rupiah = n => new Intl.NumberFormat("id-ID",{style:"currency",currency:"IDR",maximumFractionDigits:0}).format(n);
 const saveCart = () => localStorage.setItem("ihsanKoiCart", JSON.stringify(cart));
 const getProduct = id => products.find(p => p.id === id);
-
-function waUrl(message){
-  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
-}
-function showToast(text){
-  const el=document.getElementById("toast"); el.textContent=text; el.classList.add("show");
-  clearTimeout(window.toastTimer); window.toastTimer=setTimeout(()=>el.classList.remove("show"),2200);
-}
+function waUrl(message){return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`}
+function showToast(text){const el=document.getElementById("toast");if(!el)return;el.textContent=text;el.classList.add("show");clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>el.classList.remove("show"),2400)}
 function renderProducts(filter="all"){
-  const grid=document.getElementById("productGrid");
-  const list=filter==="all"?products:products.filter(p=>p.cat===filter||p.tags.includes(filter));
-  grid.innerHTML=list.map(p=>`
-    <article class="product-card reveal">
-      <div class="product-img"><img src="${p.img}" alt="${p.name}" loading="lazy"><span class="tag">${p.cat==="koi"?"KOI":"ORNAMENTAL"}</span></div>
-      <div class="product-info">
-        <div class="product-meta"><span>${p.type}</span><span>Stok ${p.stock}</span></div>
-        <h3>${p.name}</h3><p>${p.desc}</p>
-        <div class="price">${rupiah(p.price)}</div>
-        <div class="card-actions">
-          <button class="btn btn-primary" onclick="openProduct(${p.id})">Lihat Detail</button>
-          <button class="icon-btn" onclick="addToCart(${p.id})" aria-label="Tambah ke keranjang">+</button>
-        </div>
-      </div>
-    </article>`).join("");
+  const grid=document.getElementById("productGrid");const list=filter==="all"?products:products.filter(p=>p.cat===filter||p.tags.includes(filter));
+  grid.innerHTML=list.map(p=>`<article class="product-card reveal"><div class="product-img"><img src="${p.img}" alt="${p.name}" loading="lazy"><span class="tag">${p.cat==="koi"?"KOI":"ORNAMENTAL"}</span></div><div class="product-info"><div class="product-meta"><span>${p.type}</span><span>Stok ${p.stock}</span></div><h3>${p.name}</h3><p>${p.desc}</p><div class="price">${rupiah(p.price)}</div><div class="card-actions"><button class="btn btn-primary" onclick="openProduct(${p.id})">Lihat Detail</button><button class="icon-btn" onclick="addToCart(${p.id})" aria-label="Tambah ke keranjang">+</button></div></div></article>`).join("");
   animateReveals(grid);
 }
-function animateReveals(scope=document){
-  if(!window.gsap || !window.ScrollTrigger) return;
-  gsap.utils.toArray(".reveal",scope).forEach(el=>{
-    if(el.dataset.animated || el.closest(".hero")) return;
-    el.dataset.animated="1";
-    gsap.fromTo(el,{autoAlpha:0,y:28},{autoAlpha:1,y:0,duration:.75,ease:"power2.out",scrollTrigger:{trigger:el,start:"top 88%",once:true}});
-  });
+function safeMediaUrl(url){try{return encodeURI(url)}catch{return url}}
+function isDirectVideo(url){return /\.(mp4|webm|ogg)(\?|#|$)/i.test(url||"")}
+function mediaFallback(item){return `<div class="portfolio-media-fallback"><div><strong>Media sedang tidak tersedia</strong><small>${item.title||"Portofolio"}</small></div></div>`}
+function renderPortfolio(){
+  const grid=document.getElementById("portfolioGrid");
+  if(!grid)return;
+  grid.innerHTML=portfolio.length ? portfolio.map(item=>{
+    if(item.type==="image") return `<article class="portfolio-card reveal"><img src="${safeMediaUrl(item.url)}" alt="${item.title}" loading="lazy" onerror="this.outerHTML=mediaFallback(${JSON.stringify(item).replace(/</g,'&lt;')})"><div class="portfolio-overlay"><span class="portfolio-type">Foto</span><h3>${item.title}</h3><p>${item.caption||""}</p></div></article>`;
+    const isDirect=isDirectVideo(item.url);
+    return `<article class="portfolio-card reveal">${isDirect?`<video controls muted playsinline preload="metadata" poster="${safeMediaUrl(item.poster||STOCK.koiHero)}"><source src="${safeMediaUrl(item.url)}"></video>`:`<div class="portfolio-video"><small>Video external</small><a href="${safeMediaUrl(item.url)}" target="_blank" rel="noopener" aria-label="Buka sumber video ${item.title}"><span class="play">▶</span></a></div>`}<div class="portfolio-overlay"><span class="portfolio-type">Video</span><h3>${item.title}</h3><p>${item.caption||""}</p></div></article>`;
+  }).join("") : `<div class="portfolio-media-fallback" style="grid-column:1/-1;min-height:260px"><div><strong>Portofolio belum diisi</strong><small>Tambahkan media melalui halaman admin.</small></div></div>`;
+  grid.querySelectorAll("video").forEach(v=>v.addEventListener('error',()=>{const wrap=v.closest('.portfolio-card');if(wrap){v.outerHTML=mediaFallback({title:'Video tidak tersedia'})}}));
+  animateReveals(grid);
 }
-function addToCart(id, qty=1){
-  const p=getProduct(id); if(!p) return;
-  const found=cart.find(i=>i.id===id);
-  if(found) found.qty=Math.min(found.qty+qty,p.stock);
-  else cart.push({id,qty:Math.min(qty,p.stock)});
-  saveCart(); renderCart(); updateCount(); showToast(`${p.name} ditambahkan ke keranjang`);
+async function loadPortfolio(){
+  try{const res=await fetch('/api/portfolio',{cache:'no-store'});if(!res.ok)throw new Error();portfolio=await res.json();renderPortfolio();}
+  catch(err){portfolio=[];renderPortfolio();showToast('Portofolio belum bisa dimuat')}
 }
-function changeQty(id,delta){
-  const item=cart.find(i=>i.id===id), p=getProduct(id); if(!item) return;
-  item.qty+=delta; if(item.qty<=0) cart=cart.filter(i=>i.id!==id); else item.qty=Math.min(item.qty,p.stock);
-  saveCart();renderCart();updateCount();
-}
+
+function animateReveals(scope=document){if(!window.gsap||!window.ScrollTrigger)return;gsap.utils.toArray(".reveal",scope).forEach(el=>{if(el.dataset.animated||el.closest('.hero'))return;el.dataset.animated="1";gsap.fromTo(el,{autoAlpha:0,y:24},{autoAlpha:1,y:0,duration:.7,ease:"power2.out",scrollTrigger:{trigger:el,start:"top 90%",once:true}})})}
+function addToCart(id,qty=1){const p=getProduct(id);if(!p)return;const found=cart.find(i=>i.id===id);if(found)found.qty=Math.min(found.qty+qty,p.stock);else cart.push({id,qty:Math.min(qty,p.stock)});saveCart();renderCart();updateCount();showToast(`${p.name} ditambahkan ke keranjang`)}
+function changeQty(id,delta){const item=cart.find(i=>i.id===id),p=getProduct(id);if(!item)return;item.qty+=delta;if(item.qty<=0)cart=cart.filter(i=>i.id!==id);else item.qty=Math.min(item.qty,p.stock);saveCart();renderCart();updateCount()}
 function updateCount(){document.getElementById("cartCount").textContent=cart.reduce((s,i)=>s+i.qty,0)}
-function renderCart(){
-  const list=document.getElementById("cartList");
-  if(!cart.length){list.innerHTML='<div class="empty">Keranjang masih kosong.<br><br>Temukan ikan favorit Anda di koleksi.</div>';document.getElementById("cartTotal").textContent=rupiah(0);return}
-  let total=0;
-  list.innerHTML=cart.map(i=>{
-    const p=getProduct(i.id), sub=p.price*i.qty; total+=sub;
-    return `<div class="cart-item"><img src="${p.img}" alt="${p.name}"><div><h4>${p.name}</h4><small>${rupiah(p.price)}</small><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><span>${i.qty}</span><button onclick="changeQty(${p.id},1)">+</button></div></div><button class="close" onclick="changeQty(${p.id},-${i.qty})">×</button></div>`
-  }).join("");
-  document.getElementById("cartTotal").textContent=rupiah(total);
-}
+function renderCart(){const list=document.getElementById("cartList");if(!cart.length){list.innerHTML='<div class="empty">Keranjang masih kosong.<br><br>Temukan ikan favorit Anda di koleksi.</div>';document.getElementById("cartTotal").textContent=rupiah(0);return}let total=0;list.innerHTML=cart.map(i=>{const p=getProduct(i.id),sub=p.price*i.qty;total+=sub;return `<div class="cart-item"><img src="${p.img}" alt="${p.name}"><div><h4>${p.name}</h4><small>${rupiah(p.price)}</small><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><span>${i.qty}</span><button onclick="changeQty(${p.id},1)">+</button></div></div><button class="close" onclick="changeQty(${p.id},-${i.qty})">×</button></div>`}).join("");document.getElementById("cartTotal").textContent=rupiah(total)}
 function openDrawer(){document.getElementById("drawer").classList.add("open");document.getElementById("drawerBackdrop").classList.add("show");document.body.classList.add("lock")}
 function closeDrawer(){document.getElementById("drawer").classList.remove("open");document.getElementById("drawerBackdrop").classList.remove("show");document.body.classList.remove("lock")}
-function openProduct(id){
-  currentProduct=getProduct(id); const p=currentProduct;
-  document.getElementById("modalImg").src=p.img;document.getElementById("modalImg").alt=p.name;
-  document.getElementById("modalCat").textContent=p.cat==="koi"?"KOI COLLECTION":"ORNAMENTAL COLLECTION";
-  document.getElementById("modalTitle").textContent=p.name;document.getElementById("modalDesc").textContent=p.desc;document.getElementById("modalPrice").textContent=rupiah(p.price);
-  document.getElementById("modalDetails").innerHTML=`<div><span>Jenis</span><b>${p.type}</b></div><div><span>Ukuran</span><b>${p.size}</b></div><div><span>Grade</span><b>${p.grade}</b></div><div><span>Stok katalog</span><b>${p.stock} ekor</b></div>`;
-  document.getElementById("productModal").classList.add("show");document.getElementById("modalBackdrop").classList.add("show");document.body.classList.add("lock");
-}
-function closeModal(){document.getElementById("productModal").classList.remove("show");document.getElementById("checkoutModal").classList.remove("show");document.getElementById("modalBackdrop").classList.remove("show");document.body.classList.remove("lock")}
-function openCheckout(){
-  if(!cart.length){showToast("Keranjang masih kosong");return}
-  closeDrawer();document.getElementById("checkoutModal").classList.add("show");document.getElementById("modalBackdrop").classList.add("show");document.body.classList.add("lock");
-}
-function buildOrder(){
-  let total=0, lines=cart.map(i=>{const p=getProduct(i.id);total+=p.price*i.qty;return `• ${p.name} x${i.qty} — ${rupiah(p.price*i.qty)}`}).join("\n");
-  const name=document.getElementById("custName").value.trim(), area=document.getElementById("custArea").value.trim(), delivery=document.getElementById("delivery").value, note=document.getElementById("custNote").value.trim();
-  return `Halo IHSAN Koi, saya ingin konfirmasi pesanan.\n\n*DATA PEMESAN*\nNama: ${name}\nArea: ${area}\nPengiriman: ${delivery}\n\n*PESANAN*\n${lines}\n\nSubtotal katalog: ${rupiah(total)}\n\nCatatan: ${note||"-"}\n\nMohon cek ketersediaan ikan, ongkir/packing, jadwal pengiriman, dan total akhir. Saya belum melakukan pembayaran. Terima kasih.`;
-}
+function openProduct(id){currentProduct=getProduct(id);const p=currentProduct;document.getElementById("modalImg").src=p.img;document.getElementById("modalImg").alt=p.name;document.getElementById("modalCat").textContent=p.cat==="koi"?"KOI COLLECTION":"ORNAMENTAL COLLECTION";document.getElementById("modalTitle").textContent=p.name;document.getElementById("modalDesc").textContent=p.desc;document.getElementById("modalPrice").textContent=rupiah(p.price);document.getElementById("modalDetails").innerHTML=`<div><span>Jenis</span><b>${p.type}</b></div><div><span>Ukuran</span><b>${p.size}</b></div><div><span>Grade</span><b>${p.grade}</b></div><div><span>Stok katalog</span><b>${p.stock} ekor</b></div>`;openModal("productModal")}
+function openModal(id){document.getElementById(id).classList.add("show");document.getElementById("modalBackdrop").classList.add("show");document.body.classList.add("lock")}
+function closeModal(){document.querySelectorAll('.modal').forEach(m=>m.classList.remove("show"));document.getElementById("modalBackdrop").classList.remove("show");document.body.classList.remove("lock")}
+function openCheckout(){if(!cart.length){showToast("Keranjang masih kosong");return}closeDrawer();openModal("checkoutModal")}
+function buildOrder(){let total=0,lines=cart.map(i=>{const p=getProduct(i.id);total+=p.price*i.qty;return `• ${p.name} x${i.qty} — ${rupiah(p.price*i.qty)}`}).join("\n");const name=document.getElementById("custName").value.trim(),area=document.getElementById("custArea").value.trim(),delivery=document.getElementById("delivery").value,note=document.getElementById("custNote").value.trim();return `Halo IHSAN Koi, saya ingin konfirmasi pesanan.\n\n*DATA PEMESAN*\nNama: ${name}\nArea: ${area}\nPengiriman: ${delivery}\n\n*PESANAN*\n${lines}\n\nSubtotal katalog: ${rupiah(total)}\n\nCatatan: ${note||"-"}\n\nMohon cek ketersediaan ikan, ongkir/packing, jadwal pengiriman, dan total akhir. Saya belum melakukan pembayaran. Terima kasih.`}
 
-document.getElementById("year").textContent=new Date().getFullYear();
-document.getElementById("waFloat").href=waUrl("Halo IHSAN Koi, saya ingin konsultasi mengenai koi/ikan hias.");
-document.getElementById("contactWa").href=waUrl("Halo IHSAN Koi, saya ingin konsultasi mengenai koi/ikan hias dan aquarium.");
-
-document.getElementById("cartOpen").onclick=openDrawer;
-document.getElementById("cartClose").onclick=closeDrawer;
-document.getElementById("drawerBackdrop").onclick=closeDrawer;
-document.getElementById("modalClose").onclick=closeModal;
-document.getElementById("checkoutClose").onclick=closeModal;
-document.getElementById("modalBackdrop").onclick=closeModal;
-document.getElementById("checkoutBtn").onclick=openCheckout;
-document.getElementById("modalAdd").onclick=()=>{addToCart(currentProduct.id);closeModal();openDrawer()};
-document.getElementById("checkoutForm").addEventListener("submit",e=>{
-  e.preventDefault();
-  if(!document.getElementById("custName").value.trim()||!document.getElementById("custArea").value.trim())return;
-  window.open(waUrl(buildOrder()),"_blank");
-});
-document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{
-  document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));btn.classList.add("active");renderProducts(btn.dataset.filter);
-}));
+// Core UI
+const navLinks=document.getElementById("navLinks");document.getElementById("menuBtn").onclick=()=>{const open=navLinks.classList.toggle("open");document.getElementById("menuBtn").setAttribute("aria-expanded",String(open))};navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{navLinks.classList.remove("open");document.getElementById("menuBtn").setAttribute("aria-expanded","false")}));
+document.getElementById("year").textContent=new Date().getFullYear();document.getElementById("waFloat").href=waUrl("Halo IHSAN Koi, saya ingin konsultasi mengenai koi/ikan hias.");document.getElementById("contactWa").href=waUrl("Halo IHSAN Koi, saya ingin konsultasi mengenai koi/ikan hias dan aquarium.");
+document.getElementById("cartOpen").onclick=openDrawer;document.getElementById("cartClose").onclick=closeDrawer;document.getElementById("drawerBackdrop").onclick=closeDrawer;document.getElementById("modalClose").onclick=closeModal;document.getElementById("checkoutClose").onclick=closeModal;document.getElementById("modalBackdrop").onclick=closeModal;document.getElementById("checkoutBtn").onclick=openCheckout;document.getElementById("modalAdd").onclick=()=>{addToCart(currentProduct.id);closeModal();openDrawer()};
+document.getElementById("checkoutForm").addEventListener("submit",e=>{e.preventDefault();if(!document.getElementById("custName").value.trim()||!document.getElementById("custArea").value.trim())return;window.open(waUrl(buildOrder()),"_blank")});
+document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));btn.classList.add("active");renderProducts(btn.dataset.filter)}));
 document.querySelectorAll(".faq-q").forEach(q=>q.addEventListener("click",()=>q.parentElement.classList.toggle("open")));
-document.getElementById("menuBtn").onclick=()=>{document.querySelector(".nav-links").style.display=document.querySelector(".nav-links").style.display==="flex"?"":"flex"};
+window.addEventListener("scroll",()=>document.getElementById("navbar").classList.toggle("scrolled",scrollY>20));
 
-window.addEventListener("scroll",()=>{
-  document.getElementById("navbar").classList.toggle("scrolled",scrollY>20);
-});
-
-renderProducts();renderCart();updateCount();animateReveals();
-
-if(window.gsap && window.ScrollTrigger){
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.fromTo(".hero-content .reveal",
-    {autoAlpha:0,y:35},
-    {autoAlpha:1,y:0,duration:1,stagger:.08,ease:"power3.out",delay:.15}
-  );
-  gsap.to("#heroMedia",{yPercent:12,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:1}});
-  gsap.to(".scroll-note",{y:22,autoAlpha:.35,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:1}});
-}
+renderProducts();renderCart();updateCount();loadPortfolio();animateReveals();
+if(window.gsap&&window.ScrollTrigger){gsap.fromTo(".hero-content .reveal",{autoAlpha:0,y:35},{autoAlpha:1,y:0,duration:1,stagger:.08,ease:"power3.out",delay:.15});gsap.to("#heroMedia",{yPercent:10,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:1}});gsap.to(".scroll-note",{y:22,autoAlpha:.35,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:1}})}
 </script>
 </body>
 </html>
-
