@@ -106,6 +106,7 @@ img{max-width:100%;display:block}
 .footer{padding:45px 0;border-top:1px solid var(--line);margin-top:110px}.footer-inner{display:flex;justify-content:space-between;gap:25px;align-items:center}.footer small{color:var(--muted)}
 .wa-float{position:fixed;z-index:60;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#1fbd69;color:white;box-shadow:0 15px 40px rgba(31,189,105,.3);font-size:1.55rem;transition:.25s}
 .wa-float:hover{transform:translateY(-4px) scale(1.04)}
+.wa-float svg{width:30px;height:30px}
 .wa-label{position:fixed;right:92px;bottom:31px;z-index:59;background:#10251f;border:1px solid var(--line);padding:10px 14px;border-radius:999px;font-size:.76rem;box-shadow:var(--shadow)}
 .drawer-backdrop,.modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.62);backdrop-filter:blur(5px);z-index:80;opacity:0;pointer-events:none;transition:.3s}
 .drawer,.modal{position:fixed;z-index:81;background:#0b1c18;border:1px solid var(--line);box-shadow:var(--shadow)}
@@ -125,7 +126,7 @@ img{max-width:100%;display:block}
 .notice{padding:13px 15px;background:rgba(215,181,109,.08);border:1px solid rgba(215,181,109,.2);color:#d8c8a7;border-radius:14px;font-size:.78rem;line-height:1.55;margin:18px 0}
 .checkout-form{display:grid;gap:10px;margin-top:15px}.checkout-form input,.checkout-form textarea,.checkout-form select{width:100%;background:#081713;border:1px solid var(--line);color:white;border-radius:12px;padding:13px;outline:none}.checkout-form textarea{min-height:80px;resize:vertical}
 .toast{position:fixed;z-index:100;left:50%;bottom:28px;transform:translate(-50%,30px);background:#eaf1ec;color:#0a1713;padding:12px 18px;border-radius:999px;font-weight:700;font-size:.82rem;opacity:0;pointer-events:none;transition:.3s;box-shadow:var(--shadow)}.toast.show{opacity:1;transform:translate(-50%,0)}
-.reveal{opacity:0;transform:translateY(28px)}
+.reveal{opacity:1;transform:none}
 @media(max-width:900px){
  .nav-links{display:none}.menu-btn{display:block}.features{grid-template-columns:1fr 1fr}.product-grid{grid-template-columns:1fr 1fr}.story{grid-template-columns:1fr;gap:35px}.story-img{height:470px}.koi-process{grid-template-columns:1fr}.contact{flex-direction:column;align-items:flex-start}
 }
@@ -273,7 +274,14 @@ img{max-width:100%;display:block}
   </div>
 </footer>
 
-<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Chat WhatsApp">⌕</a>
+<a class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Customer Service WhatsApp" title="Customer Service WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4 13a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M4.5 13.2v3.1A2.2 2.2 0 0 0 6.7 18.5h.8v-6H6.7a2.2 2.2 0 0 0-2.2 2.2Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M19.5 13.2v3.1a2.2 2.2 0 0 1-2.2 2.2h-.8v-6h.8a2.2 2.2 0 0 1 2.2 2.2Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    <path d="M17 19c-.8 1.2-2.1 1.8-4 1.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+  </svg>
+</a>
 <div class="wa-label">Customer Service</div>
 
 <div class="drawer-backdrop" id="drawerBackdrop"></div>
@@ -329,7 +337,7 @@ img{max-width:100%;display:block}
    Ganti nomor berikut dengan nomor WhatsApp bisnis Anda.
    Format: 628xxxxxxxxxx (tanpa +, spasi, atau 0 di depan)
 ========================= */
-const WA_NUMBER = "6281234567890";
+const WA_NUMBER = "628111182094";
 
 const products = [
  {id:1,name:"Kohaku Select",cat:"koi",tags:["koi","premium"],price:850000,stock:3,size:"18–20 cm",type:"Kohaku",grade:"Select",img:"https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?auto=format&fit=crop&w=1000&q=85",desc:"Koi Kohaku dengan karakter warna merah-putih yang bersih dan elegan."},
@@ -375,7 +383,7 @@ function renderProducts(filter="all"){
 function animateReveals(scope=document){
   if(!window.gsap || !window.ScrollTrigger) return;
   gsap.utils.toArray(".reveal",scope).forEach(el=>{
-    if(el.dataset.animated) return;
+    if(el.dataset.animated || el.closest(".hero")) return;
     el.dataset.animated="1";
     gsap.fromTo(el,{autoAlpha:0,y:28},{autoAlpha:1,y:0,duration:.75,ease:"power2.out",scrollTrigger:{trigger:el,start:"top 88%",once:true}});
   });
@@ -455,7 +463,10 @@ renderProducts();renderCart();updateCount();animateReveals();
 
 if(window.gsap && window.ScrollTrigger){
   gsap.registerPlugin(ScrollTrigger);
-  gsap.from(".hero-content .reveal",{autoAlpha:0,y:35,duration:1,stagger:.08,ease:"power3.out",delay:.15});
+  gsap.fromTo(".hero-content .reveal",
+    {autoAlpha:0,y:35},
+    {autoAlpha:1,y:0,duration:1,stagger:.08,ease:"power3.out",delay:.15}
+  );
   gsap.to("#heroMedia",{yPercent:12,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:1}});
   gsap.to(".scroll-note",{y:22,autoAlpha:.35,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:1}});
 }
