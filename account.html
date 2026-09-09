@@ -1342,6 +1342,242 @@ textarea.form-control{
     padding:20px;
   }
 }
+
+/* =========================================================
+   ACCOUNT LAYOUT HARDENING
+========================================================= */
+
+html,
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+
+.page{
+  width:100%;
+  min-width:0;
+}
+
+.page > .container{
+  width:min(1180px,92%);
+  max-width:1180px;
+  min-width:0;
+}
+
+.account-layout{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+}
+
+.account-sidebar,
+.account-content,
+.panel,
+.surface,
+.welcome-card,
+.product-grid,
+.product-card,
+.shortcut-grid,
+.shortcut,
+.stats-grid{
+  min-width:0;
+  max-width:100%;
+}
+
+.account-content,
+.panel{
+  overflow:hidden;
+}
+
+.panel-header,
+.panel-header > *,
+.welcome-card,
+.welcome-card > *,
+.surface,
+.surface > *,
+.shortcut,
+.shortcut > *,
+.product-body,
+.product-meta,
+.product-actions{
+  min-width:0;
+  max-width:100%;
+}
+
+.panel-header h2,
+.panel-header p,
+.welcome-card h2,
+.welcome-card p,
+.product-name,
+.product-meta,
+.product-type{
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
+.form-grid{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+}
+
+.form-group{
+  min-width:0;
+  max-width:100%;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+input,
+select,
+textarea{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+}
+
+.product-actions,
+.product-actions button,
+.btn{
+  min-width:0;
+  max-width:100%;
+}
+
+.product-actions button{
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.order-item,
+.address-card,
+.profile-card,
+.settings-card,
+.auction-card{
+  min-width:0;
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+
+.order-item *,
+.address-card *,
+.profile-card *,
+.settings-card *,
+.auction-card *{
+  min-width:0;
+  max-width:100%;
+}
+
+.stats-grid,
+.shortcut-grid,
+.product-grid,
+.auction-grid{
+  width:100%;
+  min-width:0;
+}
+
+.stats-grid > *,
+.shortcut-grid > *,
+.product-grid > *,
+.auction-grid > *{
+  min-width:0;
+  max-width:100%;
+}
+
+img{
+  max-width:100%;
+}
+
+@media(min-width:1001px){
+  .page > .container{
+    width:min(1180px,92%);
+  }
+
+  .account-layout{
+    grid-template-columns:245px minmax(0,1fr);
+  }
+
+  .account-sidebar{
+    width:245px;
+  }
+
+  .account-content{
+    width:100%;
+  }
+}
+
+@media(max-width:1000px){
+  .account-layout{
+    grid-template-columns:210px minmax(0,1fr);
+  }
+
+  .account-sidebar{
+    width:210px;
+  }
+}
+
+@media(max-width:720px){
+  .page > .container{
+    width:calc(100% - 28px);
+    max-width:none;
+  }
+
+  .account-layout{
+    display:block;
+    width:100%;
+  }
+
+  .account-sidebar{
+    width:100%;
+    max-width:100%;
+  }
+
+  .account-content{
+    width:100%;
+    max-width:100%;
+  }
+
+  .panel-header{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .stats-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .shortcut-grid{
+    grid-template-columns:1fr;
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:420px){
+  .page > .container{
+    width:calc(100% - 20px);
+  }
+
+  .stats-grid,
+  .product-grid{
+    grid-template-columns:1fr;
+  }
+
+  .welcome-card,
+  .surface{
+    padding:16px;
+  }
+
+  .product-actions{
+    flex-direction:column;
+  }
+}
+
 </style>
 </head>
 
@@ -3312,6 +3548,8 @@ function saveAddressFromForm(event){
     addresses.push(address);
   }
 
+  const wasEditing = editingAddressId !== null;
+
   saveAddresses(addresses);
 
   closeAddressModal();
@@ -3319,7 +3557,7 @@ function saveAddressFromForm(event){
   renderDashboardStats();
 
   showToast(
-    editingAddressId !== null
+    wasEditing
       ? "Alamat berhasil diperbarui"
       : "Alamat berhasil ditambahkan"
   );

@@ -2008,6 +2008,12 @@ function applyCatalogSearch(query=""){
 
 function renderCart(){const list=document.getElementById("cartList");if(!cart.length){list.innerHTML='<div class="empty">Keranjang masih kosong.<br><br>Temukan ikan favorit Anda di koleksi.</div>';document.getElementById("cartTotal").textContent=rupiah(0);return}let total=0;list.innerHTML=cart.map(i=>{const p=getProduct(i.id),sub=p.price*i.qty;total+=sub;return `<div class="cart-item"><img src="${p.img}" alt="${p.name}"><div><h4>${p.name}</h4><small>${rupiah(p.price)}</small><div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><span>${i.qty}</span><button onclick="changeQty(${p.id},1)">+</button></div></div><button class="close" onclick="changeQty(${p.id},-${i.qty})">×</button></div>`}).join("");document.getElementById("cartTotal").textContent=rupiah(total)}
 function openDrawer(){document.getElementById("drawer").classList.add("open");document.getElementById("drawerBackdrop").classList.add("show");document.body.classList.add("lock")}
+
+function openCartFromHash(){
+  if(window.location.hash === "#cart"){
+    openDrawer();
+  }
+}
 function closeDrawer(){document.getElementById("drawer").classList.remove("open");document.getElementById("drawerBackdrop").classList.remove("show");document.body.classList.remove("lock")}
 
 const WISHLIST_KEY = "ihsanKoiWishlist";
@@ -2078,6 +2084,39 @@ function changeProductDetailQty(delta){
 }
 
 function openProduct(id){currentProduct=getProduct(id);productDetailQty=1;const p=currentProduct;document.getElementById("modalImg").src=p.img;document.getElementById("modalImg").alt=p.name;document.getElementById("modalCat").textContent=p.cat==="koi"?"KOI COLLECTION":"ORNAMENTAL COLLECTION";document.getElementById("modalTitle").textContent=p.name;document.getElementById("modalDesc").textContent=p.desc;document.getElementById("modalPrice").textContent=rupiah(p.price);document.getElementById("modalDetails").innerHTML=`<div><span>Jenis</span><b>${p.type}</b></div><div><span>Ukuran</span><b>${p.size}</b></div><div><span>Grade</span><b>${p.grade}</b></div><div><span>Stok katalog</span><b>${p.stock} ekor</b></div>`;openModal("productModal");updateWishlistButton();updateProductDetailQty()}
+
+function openProductFromURL(){
+  const productParam =
+    new URLSearchParams(window.location.search).get("product");
+
+  if(!productParam){
+    return;
+  }
+
+  const id = Number(productParam);
+
+  if(!Number.isFinite(id)){
+    return;
+  }
+
+  const product = getProduct(id);
+
+  if(!product){
+    return;
+  }
+
+  openProduct(id);
+
+  /*
+   * URL dibersihkan setelah detail berhasil dibuka,
+   * supaya refresh tidak terus membuka modal yang sama.
+   */
+  window.history.replaceState(
+    {},
+    document.title,
+    window.location.pathname
+  );
+}
 function openModal(id){document.getElementById(id).classList.add("show");document.getElementById("modalBackdrop").classList.add("show");document.body.classList.add("lock")}
 function closeModal(){document.querySelectorAll('.modal').forEach(m=>m.classList.remove("show"));document.getElementById("modalBackdrop").classList.remove("show");document.body.classList.remove("lock")}
 function validateCart(){
@@ -2287,7 +2326,9 @@ document.querySelectorAll(".filter").forEach(btn =>
 document.querySelectorAll(".faq-q").forEach(q=>q.addEventListener("click",()=>q.parentElement.classList.toggle("open")));
 window.addEventListener("scroll",()=>document.getElementById("navbar").classList.toggle("scrolled",scrollY>20));
 
-renderProducts();renderCart();updateCount();loadPortfolio();animateReveals();
+renderProducts();renderCart();updateCount();
+openProductFromURL();
+openCartFromHash();loadPortfolio();animateReveals();
 if(window.gsap&&window.ScrollTrigger){gsap.fromTo(".hero-content .reveal",{autoAlpha:0,y:35},{autoAlpha:1,y:0,duration:1,stagger:.08,ease:"power3.out",delay:.15});gsap.to("#heroMedia",{yPercent:10,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:1}});gsap.to(".scroll-note",{y:22,autoAlpha:.35,ease:"none",scrollTrigger:{trigger:".hero",start:"top top",end:"bottom top",scrub:1}})}
 </script>
 
